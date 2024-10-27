@@ -3,7 +3,7 @@ from funcs import load_dataset
 from exploration import Explore
 
 datasets = ["MNIST", "Fashion-MNIST", "UCI dataset", "MNIST-FMNIST", "synthetic", "adult", "CIFAR-FMNIST"]
-dataset_name = datasets[-2] # select a dataset from the list of datasets
+dataset_name = datasets[-3] # select a dataset from the list of datasets
 
 iterative = False
 if dataset_name == 'MNIST-FMNIST' or dataset_name == 'CIFAR-FMNIST':

@@ -23,7 +23,7 @@ def load_dataset(dataset_name, **kwargs):
     np.random.seed(500)
     if dataset_name == "adult":
         # reading from the file
-        df_data = pandas.read_csv('uci_adult_data.csv')
+        df_data = pandas.read_csv('data/uci_adult_data.csv')
         start_col = df_data.columns.get_loc('d_0')
         input_data = df_data.iloc[:, start_col:].values.astype(np.float32)
         gender_col = np.expand_dims(pandas.factorize(df_data['gender'])[0], 1)
@@ -33,7 +33,7 @@ def load_dataset(dataset_name, **kwargs):
         return input_data, labels
 
     elif dataset_name == "synthetic":
-        data_df = pandas.read_csv("synthetic_dataset.csv")
+        data_df = pandas.read_csv("data/synthetic_dataset.csv")
         data_df.head()
         prior_col = "batch"
         label_col = "celltype"
@@ -112,7 +112,7 @@ def load_dataset(dataset_name, **kwargs):
         fmnist_labels = fmnist_labels[ind]
         return input_data_transf, fmnist_labels
     elif dataset_name == 'UCI dataset':
-        data_read = pyreadr.read_r('segment.rds')  # load from .rds file
+        data_read = pyreadr.read_r('data/segment.rds')  # load from .rds file
         data_read = data_read[None]  # extract the pandas data frame for the only object available
         data_np = data_read.to_numpy()
         im_class = data_np[:, 0]
