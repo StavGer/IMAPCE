@@ -1,8 +1,11 @@
 # IMAPCE
-This repo contains the source code of paper "Cluster Exploration using Informative Manifold Projections", accepted at ECAI 2024. <br>
+This repo contains the source code of work "Cluster Exploration using Informative Manifold Projections", accepted at European Conference on Artificial Intelligence (ECAI) 2024. <br>
 Paper can be found in: https://arxiv.org/pdf/2309.14857.pdf <br>
-Run main.py file to reproduce results for IMAPCE and the baselines using the hyperparameters mentioned in the paper. <br>
+main.py contains the code to reproduce results and plots for the datasets mentioned in the paper. <br>
+
 ## Baselines
-Implementations of cPCA baseline can be found in https://github.com/abidlabs/contrastive and ct-SNE baseline in https://bitbucket.org/ghentdatascience/ct-sne/src/master/ . 
+cPCA baseline can be found in https://github.com/abidlabs/contrastive <br>
+ct-SNE baseline can be found in in https://bitbucket.org/ghentdatascience/ct-sne/src/master/ <br>
+Fair-NeRV baseline can be found in https://github.com/wenxu-fi/Fair-NeRV
 ## Contact
 If you have any questions, please feel free to reach out me at s.gerolymatos@liverpool.ac.uk
