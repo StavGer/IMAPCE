@@ -135,6 +135,8 @@ class SteepestDescent(Optimizer):
         l1_cost = []
         l2_cost = []
         convlimit = 1e-6
+        patience = 1
+        conv = 0
         while True:
             iteration += 1
             # Calculate new cost, grad and gradient_norm
@@ -153,7 +155,7 @@ class SteepestDescent(Optimizer):
             gradient_norm = manifold.norm(x, grad)
             total_cost_list.append(total_cost)
             grad_norm_list.append(gradient_norm)
-            print([str(iteration), str(total_cost), str(gradient_norm)])
+            print([str(iteration), str(total_cost), str(l1), str(l2), str(gradient_norm)])
 
             self._add_log_entry(
                 iteration=iteration,
@@ -176,7 +178,7 @@ class SteepestDescent(Optimizer):
                 gradient_norm=gradient_norm,
                 iteration=iteration,
             )
-            if stopping_criterion or (sum_((oldV - V) ** 2) < convlimit).all() :
+            if stopping_criterion or conv ==patience :
                 if self._verbosity >= 1:
                     print(stopping_criterion)
                     print("")
@@ -216,7 +218,12 @@ class SteepestDescent(Optimizer):
                         plt.tight_layout()
                     plt.savefig(self._root + 'Losses' + str(self._iteration))
                 break
+            if (sum_((oldV - V) ** 2) < convlimit).all():
+                conv +=1
+            else:
+                conv = 0
             oldV = V
+
 
         return self._return_result(
             start_time=start_time,
