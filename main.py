@@ -36,7 +36,7 @@ elif dataset_name == 'UCI dataset' or dataset_name == 'MNIST':
     input_data, data_labels = load_dataset(dataset_name)
     background_samples = None
 
-framework = Explore(model='cPCA',
+framework = Explore(model='IMAPCE',
                     dataset_name=dataset_name,
                     input_data=input_data,
                     data_labels=data_labels,
