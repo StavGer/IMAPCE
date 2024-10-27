@@ -2,7 +2,7 @@ autograd==1.7.0
 contrastive==1.2.0
 hdbscan==0.8.39
 matplotlib==3.8.3
-numpy==2.1.2
+numpy
 numpy_indexed==0.3.7
 pandas==2.2.3
 Pillow==11.0.0
