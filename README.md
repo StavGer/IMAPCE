@@ -35,6 +35,5 @@ If you use this repo or IMAPCE as part of your research, please cite our work wi
   year = {2024},
   pages = {2011--2018},
   publisher = {IOS Press},
-  doi = {10.3233/FAIA240717},
-  urldate = {2024-10-28}
+  doi = {10.3233/FAIA240717}
 }
