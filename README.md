@@ -1,9 +1,9 @@
 # IMAPCE
 This repo contains the source code of work "Cluster Exploration using Informative Manifold Projections", accepted at European Conference on Artificial Intelligence (ECAI) 2024. <br>
-Paper can be found in: https://arxiv.org/pdf/2309.14857.pdf <br>
-IMAPCE is a Dimensionality Reduction method which computes low-dimensional embeddings that filter-out any unwanted prior knowledge a practitioner may have regarding the high-dimensional data structure. The computed embeddings should form clusters that reveal any underlying and previously unknown high-dimensional data structure.
+Full Paper can be found in: https://arxiv.org/pdf/2309.14857.pdf <br>
+IMAPCE is a Dimensionality Reduction method which computes low-dimensional embeddings that filter-out any unwanted prior knowledge a practitioner may have regarding the high-dimensional data structure. The computed embeddings tend to form clusters that reveal any underlying and/or previously unknown high-dimensional data structure.
 # Code
-main.py contains the code to reproduce results and plots for the datasets mentioned in the paper. <br> <br>
+`main.py` contains the code to reproduce results and plots for the datasets mentioned in the paper. <br> <br>
 Assuming that you have some `input_data` you wish to compute embeddings for and some `prior_data` whose structure is unwanted and should be removed from the embeddings. Then, at first, you define the framework as: <br> <br>
 `framework = Explore(model='IMAPCE',
                     dataset_name=dataset_name,
