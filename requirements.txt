@@ -5,7 +5,7 @@ matplotlib==3.8.3
 numpy
 numpy_indexed==0.3.7
 pandas==2.2.3
-Pillow==11.0.0
+Pillow==12.1.1
 pymanopt==2.2.1
 pyreadr==0.5.2
 scikit_learn==1.5.2
